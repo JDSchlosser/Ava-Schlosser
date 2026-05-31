@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Ava Schlosser — Kinesiology &amp; Health Sciences</title>
+<title>Ava Schlosser | Kinesiology &amp; Health Sciences</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -131,6 +131,74 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
   nav .nav-links { display: none; }
 }
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+.sticky-contact {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--sage-dark);
+  color: white;
+  padding: 14px 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  box-shadow: 0 -2px 20px rgba(0,0,0,0.15);
+}
+.sticky-contact-text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  font-family: 'DM Sans', sans-serif;
+}
+.sticky-contact-text strong {
+  color: white;
+  font-weight: 500;
+}
+.sticky-contact-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.sticky-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+.sticky-btn-primary {
+  background: white;
+  color: var(--sage-dark);
+  border: 1px solid white;
+}
+.sticky-btn-primary:hover { background: var(--sage-pale); }
+.sticky-btn-ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.sticky-btn-ghost:hover { background: rgba(255,255,255,0.1); }
+.sticky-close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 0 0 12px;
+  line-height: 1;
+}
+.sticky-close:hover { color: white; }
+/* push page content up so footer isn't hidden behind sticky bar */
+body { padding-bottom: 70px; }
+@media (max-width: 600px) {
+  .sticky-contact { flex-direction: column; gap: 10px; text-align: center; }
+  .sticky-contact-text { font-size: 13px; }
+}
 </style>
 </head>
 <body>
@@ -158,6 +226,7 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 </div>
 </header>
+
 <div style="background: var(--sage-dark); color: rgba(255,255,255,0.85);">
 <div style="max-width:900px; margin:0 auto; padding: 0 2rem; display:grid; grid-template-columns: repeat(4,1fr); text-align:center;">
 <div style="padding: 22px 0; border-right: 1px solid rgba(255,255,255,0.15);">
@@ -170,7 +239,7 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 <div style="padding: 22px 0; border-right: 1px solid rgba(255,255,255,0.15);">
 <div style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:400; line-height:1;">4</div>
-<div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.7; margin-top:4px;">Internships</div>
+<div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.7; margin-top:4px;">Clinical Placements</div>
 </div>
 <div style="padding: 22px 0;">
 <div style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:400; line-height:1;">’26</div>
@@ -178,12 +247,19 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 </div>
 </div>
+
 <main>
 <section id="about">
 <p class="section-label">About</p>
 <h2 class="section-title">Hello, I'm Ava</h2>
-<p class="about-text">I just graduated from UMass Amherst with a degree in Kinesiology, and honestly, I could not have chosen a better fit. I've always been drawn to how the body works — how it moves, adapts, breaks down, and recovers. That curiosity led me into sports medicine, where I got to work directly with athletes on injury prevention and rehab, and into research, where I spent nearly three years studying how wearable technology can help people live longer, more active lives.</p>
-<p class="about-text" style="margin-top:1rem;">What I love most about sports medicine is the relationship side of it — being there for someone when they're frustrated, scared, or working through pain, and helping them get back to doing what they love. That human element is what drives me. Outside of work, I run marathons, which has given me a whole new appreciation for what athletes go through mentally and physically — and made me a much better clinician for it.</p>
+<p class="about-text">I just graduated from UMass Amherst with a degree in Kinesiology, and it turned out to be a perfect fit. I've always been drawn to how the body works, how it moves, adapts, breaks down, and recovers. That curiosity led me into sports medicine, where I worked directly with Division I athletes on injury prevention and rehab, and into research, where I spent nearly three years studying how wearable technology can help people live longer, more active lives.</p>
+<p class="about-text" style="margin-top:1rem;">What I love most about working in healthcare is the relationship side of it. Being there for someone when they're frustrated or working through something hard, and helping them get to a better place. That same instinct is what drew me to sales. At Ohana Vacations I discovered I genuinely enjoy the consultative process: understanding what someone needs, building trust, and guiding them toward the right solution. I'm now looking to bring both sides together in medical sales, where having a real clinical background actually means something.</p>
+<p class="about-text" style="margin-top:1rem;">Outside of work I run marathons. It has given me a real appreciation for what it takes mentally and physically to push through something hard, and honestly it has made me a better communicator and clinician for it.</p>
+<div style="margin-top:1.75rem;">
+<a class="btn btn-primary" href="mailto:avaschlosser440@gmail.com" style="display:inline-flex; align-items:center; gap:8px;">
+<i class="ti ti-mail" style="font-size:15px;"></i> Get in Touch
+    </a>
+</div>
 </section><section id="education">
 <p class="section-label">Education</p>
 <h2 class="section-title">Academic Background</h2>
@@ -223,11 +299,9 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 <h2 class="section-title">Accomplishments &amp; Passions</h2>
 <div class="accomplishments-grid">
 <div class="acc-card">
-<div class="acc-icon">
-<svg viewbox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-</div>
+<div class="acc-icon"><i class="ti ti-run" style="font-size:20px; color:var(--sage-dark);"></i></div>
 <div class="acc-title">Marathon Running</div>
-<div class="acc-desc">A dedicated long-distance runner who has completed two full marathons, demonstrating the same discipline and commitment to her running that she brings to her academic and professional pursuits.</div>
+<div class="acc-desc">A dedicated long-distance runner who has completed two full marathons. Training for and finishing a marathon takes the same qualities I try to bring to everything: consistency, resilience, and showing up even when it's hard.</div>
 <div class="acc-races">
 <div class="acc-race">
 <div class="acc-race-dot"></div>
@@ -242,25 +316,19 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 </div>
 <div class="acc-card">
-<div class="acc-icon">
-<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
-</div>
+<div class="acc-icon"><i class="ti ti-microscope" style="font-size:20px; color:var(--sage-dark);"></i></div>
 <div class="acc-title">Physical Activity Research</div>
-<div class="acc-desc">Nearly three years embedded in the EpiTech Physical Activity Lab at UMass deepened Ava's understanding of how wearable technology and epidemiology intersect with public health — and fueled her commitment to an active, healthier world. Research featured in NBC News, The New York Times, and NPR's Science Friday.</div>
+<div class="acc-desc">Nearly three years in the EpiTech Physical Activity Lab deepened my understanding of how wearable technology and epidemiology intersect with public health. The lab's research, including work I contributed to, has been featured in The New York Times, NBC News, and NPR's Science Friday.</div>
 </div>
 <div class="acc-card">
-<div class="acc-icon">
-<svg viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-</div>
+<div class="acc-icon"><i class="ti ti-first-aid-kit" style="font-size:20px; color:var(--sage-dark);"></i></div>
 <div class="acc-title">Sports Medicine &amp; Orthopedics</div>
-<div class="acc-desc">Through internships in orthopedic and sports medicine settings at UMass Athletics, Ava developed hands-on clinical experience with injury prevention, rehabilitation, and collegiate athlete care — building a well-rounded foundation for a healthcare career.</div>
+<div class="acc-desc">Through clinical placements at UMass Athletics, MaineHealth Lincoln Hospital, and ATI Physical Therapy, I built hands-on experience across injury prevention, rehabilitation, and patient care, with over 150 hours of direct clinical exposure across multiple settings.</div>
 </div>
 <div class="acc-card">
-<div class="acc-icon">
-<svg viewbox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"></path></svg>
-</div>
-<div class="acc-title">Patient-Centered Mission</div>
-<div class="acc-desc">Everything Ava pursues — from research to clinical internships to marathon training — is grounded in one goal: making a meaningful difference in patients' lives and improving outcomes in the communities she serves.</div>
+<div class="acc-icon"><i class="ti ti-trophy" style="font-size:20px; color:var(--sage-dark);"></i></div>
+<div class="acc-title">Sales MVP Recognition</div>
+<div class="acc-desc">While completing my degree full-time, I was recognized as MVP at Ohana Vacations in February for outstanding sales performance. I progressed from intern to managing full sales cycles on my own, handling everything from prospecting and client meetings to closing contracts.</div>
 </div>
 </div>
 </section><section id="skills">
@@ -268,23 +336,33 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 <h2 class="section-title">Areas of Expertise</h2>
 <div class="skills-grid">
 <div class="skill-group">
-<div class="skill-group-title"><i class="ti ti-stethoscope" style="font-size:13px; margin-right:5px; vertical-align:-1px;"></i>Clinical &amp; Health</div>
+<div class="skill-group-title"><i class="ti ti-stethoscope" style="font-size:13px; margin-right:5px; vertical-align:-1px;"></i>Clinical</div>
 <div class="skill-list">
+<span class="skill-item">Musculoskeletal Anatomy</span>
 <span class="skill-item">Injury Prevention</span>
-<span class="skill-item">Sports Rehabilitation</span>
-<span class="skill-item">Orthopedics</span>
-<span class="skill-item">Nutrition &amp; Fueling</span>
+<span class="skill-item">Exercise Prescription</span>
+<span class="skill-item">Orthopedic Rehab</span>
 <span class="skill-item">Patient Care</span>
 </div>
 </div>
 <div class="skill-group">
 <div class="skill-group-title"><i class="ti ti-chart-bar" style="font-size:13px; margin-right:5px; vertical-align:-1px;"></i>Research &amp; Data</div>
 <div class="skill-list">
-<span class="skill-item">Data Analysis</span>
 <span class="skill-item">Wearable Technology</span>
+<span class="skill-item">REDCap</span>
+<span class="skill-item">Data Analysis</span>
 <span class="skill-item">Epidemiology</span>
-<span class="skill-item">Participant Recruiting</span>
 <span class="skill-item">CITI Certified</span>
+</div>
+</div>
+<div class="skill-group">
+<div class="skill-group-title"><i class="ti ti-star" style="font-size:13px; margin-right:5px; vertical-align:-1px;"></i>Sales</div>
+<div class="skill-list">
+<span class="skill-item">Consultative Selling</span>
+<span class="skill-item">Full Sales Cycle</span>
+<span class="skill-item">Client Relations</span>
+<span class="skill-item">Needs Assessment</span>
+<span class="skill-item">Pipeline Management</span>
 </div>
 </div>
 <div class="skill-group">
@@ -293,18 +371,8 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 <span class="skill-item">Rapport Building</span>
 <span class="skill-item">Emotional Intelligence</span>
 <span class="skill-item">Communication</span>
-<span class="skill-item">Teaching &amp; Coaching</span>
-<span class="skill-item">Customer Service</span>
-</div>
-</div>
-<div class="skill-group">
-<div class="skill-group-title"><i class="ti ti-star" style="font-size:13px; margin-right:5px; vertical-align:-1px;"></i>Professional</div>
-<div class="skill-list">
-<span class="skill-item">Sales Support</span>
-<span class="skill-item">Time Management</span>
 <span class="skill-item">Leadership</span>
 <span class="skill-item">Team Collaboration</span>
-<span class="skill-item">Distance Running</span>
 </div>
 </div>
 </div>
@@ -321,8 +389,8 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 <div>
 <div class="exp-role"><i class="ti ti-first-aid-kit" style="font-size:14px; color:var(--sage); margin-right:6px;"></i>Sports Medicine Intern</div>
-<div class="exp-org">UMass Athletics — Amherst, MA</div>
-<div class="exp-desc">Led warm-ups and supervised strength training for Division I athletes, emphasizing biomechanics, movement quality, and injury prevention. Collaborated with coaches and sports medicine staff to assess athlete performance and deliver actionable coaching cues related to movement quality, fatigue, and injury risk.</div>
+<div class="exp-org">UMass Athletics, Amherst, MA</div>
+<div class="exp-desc">Led warm-ups and supervised strength training for Division I athletes, emphasizing biomechanics, movement quality, and injury prevention. Worked closely with coaches and sports medicine staff to assess how athletes were moving, flag fatigue or injury risk, and communicate clearly in a high-performance environment.</div>
 <div class="exp-skills">
 <span class="skill-tag">Injury Prevention</span>
 <span class="skill-tag">Biomechanics</span>
@@ -338,8 +406,8 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 <div>
 <div class="exp-role"><i class="ti ti-first-aid-kit" style="font-size:14px; color:var(--sage); margin-right:6px;"></i>Physical Therapy Intern</div>
-<div class="exp-org">MaineHealth Lincoln Hospital — Boothbay Harbor, ME</div>
-<div class="exp-desc">Collaborated with physicians and physical therapists to support patient care and rehabilitation of musculoskeletal and post-surgical conditions. Observed and assisted in orthopedic evaluations, treatment planning, and therapeutic exercise interventions. Gained exposure to clinical decision-making and recovery progression.</div>
+<div class="exp-org">MaineHealth Lincoln Hospital, Boothbay Harbor, ME</div>
+<div class="exp-desc">Worked alongside physicians and physical therapists supporting patient care and rehab for musculoskeletal and post-surgical conditions. Assisted with orthopedic evaluations, treatment planning, and therapeutic exercise, and got a real look at how clinical decisions are made and how recovery progresses.</div>
 <div class="exp-skills">
 <span class="skill-tag">Orthopedic Rehab</span>
 <span class="skill-tag">Patient Care</span>
@@ -355,8 +423,8 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 <div>
 <div class="exp-role"><i class="ti ti-first-aid-kit" style="font-size:14px; color:var(--sage); margin-right:6px;"></i>Orthopedic Clinical Observer</div>
-<div class="exp-org">ATI Physical Therapy — Amherst, MA</div>
-<div class="exp-desc">Completed 150 hours of outpatient clinical observation, gaining exposure to the assessment and rehabilitation of sports-related injuries and orthopedic conditions. Observed patient evaluations, treatment progression, and rehabilitation strategies used to restore function and mobility.</div>
+<div class="exp-org">ATI Physical Therapy, Amherst, MA</div>
+<div class="exp-desc">Completed 150 hours of outpatient clinical observation focused on sports injuries and orthopedic conditions. Watched patient evaluations, treatment progressions, and the rehab strategies clinicians use to get people moving again.</div>
 <div class="exp-skills">
 <span class="skill-tag">Outpatient Ortho</span>
 <span class="skill-tag">Sports Injuries</span>
@@ -374,9 +442,9 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 <div>
 <div class="exp-role"><i class="ti ti-microscope" style="font-size:14px; color:var(--sage); margin-right:6px;"></i>Research Assistant</div>
-<div class="exp-org"><a href="https://www.epitechactivitylab.com" target="_blank">EpiTech Physical Activity Lab — UMass Amherst</a></div>
-<div class="exp-desc">Supported CDC-funded research in collaboration with Harvard University evaluating wearable medical devices for monitoring physical activity, respiratory health, and cardiovascular risk in older adults. Delivered in-home device education and technical support to participants. Collected, processed, and analyzed physiological and activity-based data to evaluate device performance and support clinical research outcomes in a MedTech setting.</div>
-<div class="highlight-box"><strong>Lab focus:</strong> Physical activity epidemiology and wearable technology to advance monitoring and promotion of active lifestyles — research featured in The New York Times, NBC News, and NPR's Science Friday.</div>
+<div class="exp-org"><a href="https://www.epitechactivitylab.com" target="_blank">EpiTech Physical Activity Lab, UMass Amherst</a></div>
+<div class="exp-desc">Worked on CDC-funded research with Harvard University looking at how wearable medical devices can monitor physical activity, respiratory health, and cardiovascular risk in older adults. Went into participants' homes to set up devices, walk them through how to use them, and troubleshoot any issues. Collected and analyzed physiological and activity data to evaluate how well the devices performed.</div>
+<div class="highlight-box"><strong>Lab focus:</strong> Physical activity epidemiology and wearable technology to advance monitoring and promotion of active lifestyles. Research featured in The New York Times, NBC News, and NPR's Science Friday.</div>
 <div class="exp-skills" style="margin-top:14px;">
 <span class="skill-tag">CDC-Funded Research</span>
 <span class="skill-tag">Harvard Collaboration</span>
@@ -397,8 +465,8 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 <div>
 <div class="exp-role"><i class="ti ti-briefcase" style="font-size:14px; color:var(--sage); margin-right:6px;"></i>Sales Representative</div>
-<div class="exp-org">Ohana Vacations — Hybrid</div>
-<div class="exp-desc">Executed full-cycle consultative sales including prospecting, client meetings, and closing contracts while balancing a full-time academic workload. Built and maintained client relationships through needs assessment, solution-based selling, and consistent follow-up. Recognized as MVP in February for outstanding performance. Progressed from intern to independently managing full sales cycles.</div>
+<div class="exp-org">Ohana Vacations, Hybrid</div>
+<div class="exp-desc">Managed the full sales process from prospecting to close while carrying a full academic course load. Built genuine relationships with clients by focusing on their needs first and following through consistently. Started as an intern and earned my way into running full sales cycles on my own. Named MVP in February for top performance.</div>
 <div class="exp-skills">
 <span class="skill-tag">Consultative Sales</span>
 <span class="skill-tag">Client Relations</span>
@@ -415,7 +483,7 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 <div>
 <div class="exp-role"><i class="ti ti-flask" style="font-size:14px; color:var(--sage); margin-right:6px;"></i>Head Undergraduate Teaching Assistant</div>
 <div class="exp-org">UMass Amherst Chemistry Department</div>
-<div class="exp-desc">Led and coordinated a team of undergraduate TAs for a large Chemistry II course serving up to 400 students. Conducted one-on-one tutoring and exam review sessions. Met weekly with the professor to align teaching strategies and coordinate consistent delivery of course material.</div>
+<div class="exp-desc">Ran a team of undergraduate TAs for a Chemistry II course with up to 400 students. Did one-on-one tutoring, ran exam review sessions, and met weekly with the professor to make sure we were all on the same page and delivering material consistently.</div>
 <div class="exp-skills">
 <span class="skill-tag">Team Leadership</span>
 <span class="skill-tag">Teaching</span>
@@ -430,8 +498,8 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 </div>
 <div>
 <div class="exp-role"><i class="ti ti-tools-kitchen-2" style="font-size:14px; color:var(--sage); margin-right:6px;"></i>Server &amp; Event Staff</div>
-<div class="exp-org">Linekin Bay Resort — Boothbay Harbor, ME</div>
-<div class="exp-desc">Delivered high-quality service in a fine dining restaurant across six summer seasons. Supported weddings and large-scale events from setup to completion, working extended shifts while coordinating with staff to ensure seamless, high-end guest experiences.</div>
+<div class="exp-org">Linekin Bay Resort, Boothbay Harbor, ME</div>
+<div class="exp-desc">Worked six summers in a fine dining restaurant and helped staff weddings and large events from setup to finish. Learned quickly how to read a room, stay composed under pressure, and make guests feel genuinely taken care of.</div>
 <div class="exp-skills">
 <span class="skill-tag">Fine Dining</span>
 <span class="skill-tag">Event Staffing</span>
@@ -446,8 +514,23 @@ footer .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 22px;
 <div class="footer-name">Ava Schlosser</div>
 <p><a href="https://www.linkedin.com/in/ava-schlosser/" target="_blank"><i class="ti ti-brand-linkedin" style="vertical-align:-2px; margin-right:5px;"></i>linkedin.com/in/ava-schlosser</a></p>
 <p style="margin-top:8px;"><i class="ti ti-mail" style="vertical-align:-2px; margin-right:5px;"></i><a href="mailto:avaschlosser440@gmail.com" style="color:rgba(255,255,255,0.85); text-decoration:none;">avaschlosser440@gmail.com</a></p>
-  <p style="margin-top:6px;"><i class="ti ti-phone" style="vertical-align:-2px; margin-right:5px;"></i><a href="tel:2078444772" style="color:rgba(255,255,255,0.85); text-decoration:none;">207-844-4772</a></p>
-  <p style="margin-top:6px;"><i class="ti ti-map-pin" style="vertical-align:-2px; margin-right:4px;"></i>Amherst, Massachusetts</p>
+<p style="margin-top:6px;"><i class="ti ti-phone" style="vertical-align:-2px; margin-right:5px;"></i><a href="tel:2078444772" style="color:rgba(255,255,255,0.85); text-decoration:none;">207-844-4772</a></p>
+<p style="margin-top:6px;"><i class="ti ti-map-pin" style="vertical-align:-2px; margin-right:4px;"></i>Amherst, Massachusetts</p>
 </footer>
+
+<div class="sticky-contact" id="stickyContact">
+  <div class="sticky-contact-text">
+    <strong>Open to new opportunities</strong> &nbsp;·&nbsp; Available for medical sales, clinical operations, and healthcare roles
+  </div>
+  <div class="sticky-contact-actions">
+    <a href="tel:2078444772" class="sticky-btn sticky-btn-ghost">
+      <i class="ti ti-phone" style="font-size:14px;"></i> 207-844-4772
+    </a>
+    <a href="mailto:avaschlosser440@gmail.com?subject=Opportunity%20for%20Ava%20Schlosser&body=Hi%20Ava%2C%0A%0AI%20came%20across%20your%20profile%20and%20would%20love%20to%20connect%20about%20an%20opportunity.%0A%0A" class="sticky-btn sticky-btn-primary">
+      <i class="ti ti-mail" style="font-size:14px;"></i> Contact Ava
+    </a>
+    <button class="sticky-close" onclick="document.getElementById('stickyContact').style.display='none'" aria-label="Dismiss">&times;</button>
+  </div>
+</div>
 </body>
 </html>
