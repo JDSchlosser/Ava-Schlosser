@@ -519,18 +519,18 @@ body { padding-bottom: 70px; }
 <p style="margin-top:6px;"><i class="ti ti-map-pin" style="vertical-align:-2px; margin-right:4px;"></i>Amherst, Massachusetts</p>
 </footer>
 
-<div class="sticky-contact" id="stickyContact">
-  <div class="sticky-contact-text">
+<div class="sticky-contact" id="stickyContact" style="position:fixed !important; bottom:0 !important; left:0 !important; right:0 !important; z-index:9999 !important; background:#4a6657; color:white; padding:14px 2rem; display:flex; align-items:center; justify-content:space-between; box-shadow:0 -2px 20px rgba(0,0,0,0.15);">
+  <div class="sticky-contact-text" style="font-size:14px; color:rgba(255,255,255,0.85); font-family:'DM Sans',sans-serif;">
     <strong>Open to new opportunities</strong> &nbsp;·&nbsp; Available for medical sales, clinical operations, and healthcare roles
   </div>
-  <div class="sticky-contact-actions">
-    <a href="tel:2078444772" class="sticky-btn sticky-btn-ghost">
+  <div class="sticky-contact-actions" style="display:flex; gap:12px; align-items:center;">
+    <a href="tel:2078444772" style="display:inline-flex; align-items:center; gap:7px; padding:9px 20px; border-radius:6px; font-size:13px; font-weight:500; text-decoration:none; background:transparent; color:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.3);">
       <i class="ti ti-phone" style="font-size:14px;"></i> 207-844-4772
     </a>
-    <a href="mailto:avaschlosser440@gmail.com?subject=Opportunity%20for%20Ava%20Schlosser&body=Hi%20Ava%2C%0A%0AI%20came%20across%20your%20profile%20and%20would%20love%20to%20connect%20about%20an%20opportunity.%0A%0A" class="sticky-btn sticky-btn-primary">
+    <a href="mailto:avaschlosser440@gmail.com?subject=Opportunity%20for%20Ava%20Schlosser&body=Hi%20Ava%2C%0A%0AI%20came%20across%20your%20profile%20and%20would%20love%20to%20connect%20about%20an%20opportunity.%0A%0A" style="display:inline-flex; align-items:center; gap:7px; padding:9px 20px; border-radius:6px; font-size:13px; font-weight:600; text-decoration:none; background:#f0ebe0; color:#4a6657; border:2px solid #f0ebe0;">
       <i class="ti ti-mail" style="font-size:14px;"></i> Contact Ava
     </a>
-    <button class="sticky-close" onclick="document.getElementById('stickyContact').style.display='none'" aria-label="Dismiss">&times;</button>
+    <button onclick="document.getElementById('stickyContact').style.display='none'" aria-label="Dismiss" style="background:none; border:none; color:rgba(255,255,255,0.5); cursor:pointer; font-size:22px; padding:0 0 0 12px; line-height:1;">&times;</button>
   </div>
 </div>
 </body>
